@@ -7,8 +7,15 @@ p "Are we there yet?"
 
 answer = gets.chomp.downcase
 
+history = Array.new()
+history << answer
+
 while answer != "yes"
   p "Are we there yet?"
   
   answer = gets.chomp.downcase
+  history << answer
 end
+
+
+p history

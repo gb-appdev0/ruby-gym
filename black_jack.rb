@@ -31,5 +31,7 @@ elsif num2 == 11
   else
     p num1 + 1
   end
+else
+  p 0
   
 end

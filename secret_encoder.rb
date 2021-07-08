@@ -9,10 +9,15 @@ p "Enter in the secret you want to encode"
 
 input = gets.chomp
 vowels = "aeiou"
+vowels_cap = "AEIOU"
 
 input.each_char.with_index do |char, i|
   if vowels.include?(char)
     input[i] = (vowels.index(char) + 1).to_s
+  end
+
+  if vowels_cap.include?(char)
+    input[i] = (vowels_cap.index(char) + 1).to_s
   end
 
 end

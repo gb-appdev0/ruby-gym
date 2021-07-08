@@ -41,12 +41,12 @@ case some_random_input
 when String
   p some_random_input.downcase
 when Time
-  p some_random_input.wday.downcase
+  p some_random_input.strftime("%A").downcase
 when Integer
   if some_random_input.odd? then
-    p "X is odd"
+    p "#{some_random_input} is odd"
   else
-    p "X is even"
+    p "#{some_random_input} is even"
   end
 when Symbol
   p some_random_input.downcase

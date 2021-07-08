@@ -10,7 +10,7 @@ words = sentence.split(" ")
 the_count = 0
 
 words.each do |word|
-  if word == "the"
+  if word.gsub(/[^a-z]/i, '') == "the"
     the_count += 1
   end
 end

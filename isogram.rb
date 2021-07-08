@@ -20,3 +20,18 @@
 #   String.isogram?("eleven") # => false
 #   String.isogram?("subdermatoglyphic") # => true
 
+class String
+
+  def String.isogram?(string)
+
+    string = string.gsub(" ","")
+    string = string.gsub("-","").downcase
+    string.each_char do |char|
+      if string.count(char) > 1 then
+        return false
+      end
+    end
+
+    return true
+  end
+end
