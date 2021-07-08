@@ -38,3 +38,21 @@
 
 #   p g_dna.distance_between(t_dna) # => 1
 
+class Dna
+  attr_accessor :strand
+
+  def distance_between(other)
+
+    dif_count = 0
+    self.strand.each_char.with_index do |char, i|
+      if self.strand[i] != other.strand[i] then
+        dif_count += 1
+      end
+    end
+
+    return dif_count
+
+  end
+
+end
+
