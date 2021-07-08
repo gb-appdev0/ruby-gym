@@ -11,3 +11,12 @@
 # 16
 
 p "Enter at least 2 numbers, separated by spaces:"
+nums = gets.chomp.split(" ").map(&:to_i)
+sum = 0
+nums.each do |num|
+  if num.odd?
+    sum += num
+  end
+end
+
+p sum

@@ -14,3 +14,27 @@
 #   5. The year is not a leap year (it has 365 days).
 
 p "Enter a year:"
+
+year = gets.chomp.to_i
+leap = false
+
+if year % 4 == 0 then
+  if year % 100 == 0 then
+    if year % 400 == 0 then
+      leap = true
+    else
+      leap = false
+    end
+  else
+    leap = true
+  end
+else
+  leap = false
+end
+
+if leap then 
+  p "#{year} is a leap year!"
+else
+  p "#{year} is not a leap year"
+end
+

@@ -16,6 +16,8 @@
 #   to find out what kind of thing it is. We first met it way back in the Integer Chapter,
 #   and we used it a lot especially when exploring an API response, which could come back to us in different shapes and sizes.
 
+
+require "date"
 unpredictable_inputs = [
   "Hello!",
   Time.now,
@@ -32,4 +34,30 @@ some_random_input = unpredictable_inputs.sample
 p some_random_input
 
 # Write your code below
+
+cat = some_random_input.class
+
+case some_random_input
+when String
+  p some_random_input.downcase
+when Time
+  p some_random_input.wday.downcase
+when Integer
+  if some_random_input.odd? then
+    p "X is odd"
+  else
+    p "X is even"
+  end
+when Symbol
+  p some_random_input.downcase
+when nil
+  p "no object provided"
+when true
+  p "you may pass"
+when false
+  p "you may not pass"
+when Hash
+  p some_random_input.keys
+end 
+
 

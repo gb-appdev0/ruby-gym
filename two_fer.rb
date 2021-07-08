@@ -9,3 +9,10 @@
 # If no name is given, the result should be "One for you, one for me."
 
 p "Enter a name:"
+name = gets.chomp
+
+if name == "" or name == nil
+  name = "you"
+end
+
+p "One for #{name}, one for me"
